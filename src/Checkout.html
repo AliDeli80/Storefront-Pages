@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+    
+    <header>
+        <!-- the first navbar -->
+        <nav class="bg-[#111824] flex justify-between py-2 px-12">
+            <span class="flex items-center font-medium text-base gap-1 text-white cursor-pointer">CAD<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>                  
+            </span>
+            <div class="text-white font-medium text-base">
+                <a class="pr-8" href="#">Sign in</a>
+                <a href="#">Create an account</a>
+            </div>
+        </nav>
+        <!-- second navbar -->
+        <nav class="flex justify-between items-center bg-neutral-600 py-4 px-12">
+            <a href="#">
+                <span class="hidden">page logo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="35" height="35" class="text-white">
+                    <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+                    <path fill-rule="evenodd" d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div class="text-white flex gap-8 font-semibold pl-12">
+                <button id="mega-menu-women" class="z-50" type="button">Women</button>
+                <button id="mega-menu-men" class="z-50" type="button">Men</button>
+                <button type="button">Company</button>
+                <button type="button">Stores</button>
+            </div>
+            <div class="flex text-white gap-8 font-semibold">
+                <a href="#">Search</a>
+                <a href="#">Help</a>
+                <a class="flex gap-2" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    0                      
+                </a>
+            </div>              
+        </nav>
+    </header>
+
+    <main class="flex">
+
+        <section class="py-24 px-8 w-2/3 ">
+            <div class="flex flex-col justify-center items-center">
+                <div class="w-[32rem]">
+                    <button class="font-normal text-lg focus:ring-2 hover:bg-[#1f2937] focus:ring-[#111827] focus:ring-offset-2 shadow text-white bg-[#111827] py-2 rounded-md w-full flex items-center justify-center" type="button">
+                        <span class="hidden">Pay with Apple Pay</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+                            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+                            <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/>
+                        </svg>
+                        Pay
+                    </button>
+                </div>
+                <div class="w-[32rem]">
+                    <div class="mt-8 relative">
+                        <div aria-hidden="true" class="flex items-center absolute inset-0 top-3">
+                            <div class="border-t-[1px] border-[#e5e7eb] w-full"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center relative z-10">
+                        <span class="text-[#6b7280] font-medium text-sm px-4 bg-white">or</span>
+                    </div>
+                </div>
+            </div>
+
+                <form class="mt-6 flex flex-col justify-center items-center">
+                    <div class="w-[32rem]">
+                        <div>
+                            <label for="email-address" class="text-[#374151] font-medium text-sm">Email address</label>
+                        </div>
+                        <div class="mt-1">
+                            <input id="email-address" name="email-address" type="email" autocomplete="email" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                        </div>
+                    </div>
+                    <div class="w-[32rem] mt-6">
+                        <div>
+                            <label for="name-on-card" class="text-[#374151] font-medium text-sm">Name on card</label>
+                        </div>
+                        <div class="mt-1">
+                            <input id="name-on-card" name="name-on-card" type="text" autocomplete="cc-name" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                        </div>
+                    </div>
+                    <div class="w-[32rem] mt-6">
+                        <div>
+                            <label for="card-number" class="text-[#374151] font-medium text-sm">Card number</label>
+                        </div>
+                        <div class="mt-1">
+                            <input id="card-number" name="card-number" type="text" autocomplete="cc-number" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                        </div>
+                    </div>
+                    <div class="w-[32rem] mt-6 flex">
+                        <div class="w-full mr-4">
+                            <div>
+                                <label for="expiration-date" class="text-[#374151] font-medium text-sm">Expiration date (MM/YY)</label>
+                            </div>
+                            <div class="mt-1">
+                                <input id="expiration-date" name="expiration-date" type="text" autocomplete="cc-exp" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="cvc" class="text-[#374151] font-medium text-sm">CVC</label>
+                            </div>
+                            <div class="mt-1">
+                                <input id="cvc" name="cvc" type="text" autocomplete="cc-csc" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[32rem] mt-6">
+                        <div>
+                            <label for="address" class="text-[#374151] font-medium text-sm">Address</label>
+                        </div>
+                        <div class="mt-1">
+                            <input id="address" name="address" type="text" autocomplete="street-address" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                        </div>
+                    </div>
+                    <div class="w-[32rem] mt-6 flex">
+                        <div class="mr-4">
+                            <div>
+                                <label for="city" class="text-[#374151] font-medium text-sm">City</label>
+                            </div>
+                            <div class="mt-1">
+                                <input id="city" name="city" type="text" autocomplete="address-level2" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                            </div>
+                        </div>
+                        <div class="mr-4">
+                            <div>
+                                <label for="region" class="text-[#374151] font-medium text-sm">State / Province</label>
+                            </div>
+                            <div class="mt-1">
+                                <input id="region" name="region" type="text" autocomplete="address-level1" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="postal-code" class="text-[#374151] font-medium text-sm">Postal code</label>
+                            </div>
+                            <div class="mt-1">
+                                <input id="postal-code" name="postal-code" type="text" autocomplete="postal-code" class="text-sm shadow-sm border-[#d1d5db] border-[1px] px-3 py-2 rounded-md w-full outline-none focus:ring-1 focus:ring-[#6366f1] focus:border-[1px] focus:border-[#6366f1]">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center w-[32rem] mt-6">
+                        <div class="flex items-center h-5">
+                            <input id="same-as-shipping" name="same-as-shipping" type="checkbox" class="rounded w-4 h-4">
+                        </div>
+                        <label for="same-as-shipping" class="text-[#111827] font-medium text-sm ml-2">Billing address is the same as shipping address</label>
+                    </div>
+                    <button type="button" class="mt-6 font-normal text-lg focus:ring-2 hover:bg-[#4338ca] focus:ring-[#4f46e5] focus:ring-offset-2 shadow text-white bg-[#6366f1] py-2 rounded-md w-[32rem] flex items-center justify-center">Pay $341.68</button>
+                    <div class="flex text-[#6b7280] text-sm font-medium mt-6 justify-center items-center">
+                        <div class="mr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clip-rule="evenodd" />
+                            </svg>                              
+                        </div>
+                        <p>Payment details stored in plain text</p>
+                    </div>
+                </form>
+        </section>
+        
+        <section class="w-1/3 flex flex-col bg-[#f9fafb]">
+            <ul class="px-6 overflow-hidden">
+                <li class="flex py-6">
+                    <img class="object-cover object-center rounded-md w-40 h-40" src="./images/checkout-page-04-product-01.jpg" alt="images">
+                    <div class="flex flex-col justify-between ml-6">
+                        <div class="font-medium text-sm">
+                            <h3 class="text-[#111827]">Micro Backpack</h3>
+                            <p class="text-[#111827] mt-1">$70.00</p>
+                            <p class="text-[#6b7280] mt-1">Moss</p>
+                            <p class="text-[#6b7280] mt-1">5L</p>
+                        </div>
+                        <div class="flex">
+                            <button class="text-[#4f46e5] text-sm font-medium" type="button">Edit</button>
+                            <div class="flex border-l-[1px] border-[#d1d5db] pl-4 ml-4">
+                                <button class="text-[#4f46e5] text-sm font-medium" type="button">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex py-6 border-y-[1px]">
+                    <img class="object-cover object-center rounded-md w-40 h-40" src="./images/checkout-page-04-product-02.jpg" alt="images">
+                    <div class="flex flex-col justify-between ml-6">
+                        <div class="font-medium text-sm">
+                            <h3 class="text-[#111827]">Small Stuff Satchel</h3>
+                            <p class="text-[#111827] mt-1">$180.00</p>
+                            <p class="text-[#6b7280] mt-1">Sand</p>
+                            <p class="text-[#6b7280] mt-1">18L</p>
+                        </div>
+                        <div class="flex">
+                            <button class="text-[#4f46e5] text-sm font-medium" type="button">Edit</button>
+                            <div class="flex border-l-[1px] border-[#d1d5db] pl-4 ml-4">
+                                <button class="text-[#4f46e5] text-sm font-medium" type="button">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex py-6">
+                    <img class="object-cover object-center rounded-md w-40 h-40" src="./images/checkout-page-04-product-03.jpg" alt="images">
+                    <div class="flex flex-col justify-between ml-6">
+                        <div class="font-medium text-sm">
+                            <h3 class="text-[#111827]">Carry Clutch</h3>
+                            <p class="text-[#111827] mt-1">$70.00</p>
+                            <p class="text-[#6b7280] mt-1">White and Black</p>
+                            <p class="text-[#6b7280] mt-1">Small</p>
+                        </div>
+                        <div class="flex">
+                            <button class="text-[#4f46e5] text-sm font-medium" type="button">Edit</button>
+                            <div class="flex border-l-[1px] border-[#d1d5db] pl-4 ml-4">
+                                <button class="text-[#4f46e5] text-sm font-medium" type="button">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="p-6 border-t-[1px]">
+                <form>
+                    <label class="text-[#374151] text-sm font-medium" for="discount-code">Discount code</label>
+                    <div class="flex mt-1">
+                        <input class="border-[#d1d5db] border-[1px] focus:ring-[#6366f1] focus:border-[#6366f1] focus:ring-1 outline-none shadow-sm text-sm rounded-md w-full py-2 px-3" type="text" name="discount-code" id="discount-code">
+                        <button class="ml-4 text-[#4b5563] font-medium text-sm px-4 bg-[#e5e7eb] rounded-md hover:bg-[#d1d5db]" type="button">Apply</button>
+                    </div>
+                </form>
+                <dl class="text-[#6b7280] text-sm font-medium mt-10 sticky">
+                    <div class="flex justify-between">
+                        <dt>Subtotal</dt>
+                        <dd class="text-[#111827]">$210.00</dd>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <dt class="flex">
+                            Discount
+                            <span class="text-[#4b5563] tracking-wide text-xs py-[0.125rem] px-2 bg-[#e5e7eb] rounded-full ml-2">CHEAPSKATE</span>
+                        </dt>
+                        <dd class="text-[#111827]">-$24.00</dd>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <dt>Taxes</dt>
+                        <dd class="text-[#111827]">$23.68</dd>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <dt>Shipping</dt>
+                        <dd class="text-[#111827]">$22.00</dd>
+                    </div>
+                    <div class="flex justify-between mt-6 pt-6 text-[#111827] text-base border-[#e5e7eb] border-t-[1px]">
+                        <dt>Total</dt>
+                        <dd>$341.68</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#111827] px-8">
+        <div class=" flex justify-between gap-8 py-20">
+            <!-- shop list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Shop</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Bags</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Tees</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Objects</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Home Goods</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Accessories</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Company list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Company</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Who we are</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Sustainability</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Press</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Careers</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Account list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Account</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Manage Account</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Returns & Exchanges</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Redeem a Gift Card</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Connect list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Connect</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Contact Us</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Facebook</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Instagram</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign up for our newsletter -->
+            <div>
+                <h3 class="text-white font-medium text-base">Sign up for our newsletter</h3>
+                <div>
+                    <p class="mt-6 text-[#d1d5db] text-base">The latest deals and savings, sent to your inbox weekly.</p>
+                </div>
+                <form class="mt-2 flex" action="searchbox">
+                    <label class="hidden" for="email-address">Email address</label>
+                    <input class="shadow py-2 px-4 rounded-md w-full border-transparent" type="text" id="email-address" required>
+                    <div class="ml-4 shrink-0">
+                        <button class="shadow font-medium text-base px-4 py-2 bg-[#4f46e5] border-transparent rounded-md w-full justify-center items-center flex text-white" type="submit" >Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- copyright section -->
+        <div class="border-[#1f2937] border-t-2 py-10">
+            <p class="text-[#9ca3af] text-sm">Copyright © 2021 Your Company, Inc.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

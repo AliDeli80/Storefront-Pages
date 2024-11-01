@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+    
+    <header>
+        <!-- the first navbar -->
+        <nav class="bg-[#111824] flex justify-between py-2 px-12">
+            <span class="flex items-center font-medium text-base gap-1 text-white cursor-pointer">CAD<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>                  
+            </span>
+            <div class="text-white font-medium text-base">
+                <a class="pr-8" href="#">Sign in</a>
+                <a href="#">Create an account</a>
+            </div>
+        </nav>
+        <!-- second navbar -->
+        <nav class="flex justify-between items-center bg-neutral-600 py-4 px-12">
+            <a href="#">
+                <span class="hidden">page logo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="35" height="35" class="text-white">
+                    <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+                    <path fill-rule="evenodd" d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div class="text-white flex gap-8 font-semibold pl-12">
+                <button id="mega-menu-women" class="z-50" type="button">Women</button>
+                <button id="mega-menu-men" class="z-50" type="button">Men</button>
+                <button type="button">Company</button>
+                <button type="button">Stores</button>
+            </div>
+            <div class="flex text-white gap-8 font-semibold">
+                <a href="#">Search</a>
+                <a href="#">Help</a>
+                <a class="flex gap-2" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    0                      
+                </a>
+            </div>              
+        </nav>
+    </header>
+
+    <main class="px-10 pt-16 pb-24">
+        <h1 class="text-[#111827] tracking-tight font-bold text-4xl">Shopping Cart</h1>
+        <form class="flex mt-12 gap-16">
+            <section aria-labelledby="cart-heading" class="flex-col w-2/3">
+                <h2 class="hidden">Items in your shopping cart</h2>
+                <ul class="border-[#e5e7eb] border-y-[1px]">
+                    <li class="py-10 flex">
+                        <div>
+                            <img class="w-48 h-48 object-cover object-center rounded-md" src="./images/shopping-cart-page-01-product-01.jpg" alt="images">
+                        </div>
+                        <div class="ml-6 flex flex-col justify-between w-full">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="flex flex-col col-span-1">
+                                    <div>
+                                        <h3 class="text-sm">
+                                            <a class="text-[#374151] font-medium" href="#">Basic Tee</a>
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center mt-1 text-sm">
+                                        <p class="text-[#6b7280]">Sienna</p>
+                                        <p class="text-[#6b7280] pl-4 border-[#e5e7eb] border-l-[1px] ml-4">Large</p>
+                                    </div>
+                                    <p class="text-sm font-medium mt-1">$32.00</p>
+                                </div>
+                                <div class="flex justify-between items-start">
+                                    <label for="quantity-0" class="hidden">Quantity, Basic Tee</label>
+                                    <select name="quantity-0" id="quantity-0" class="w-14 text-sm shadow px-2 text-[#374151] font-medium text-left py-[0.375rem] focus:border-[#6366f1] focus:ring-[#6366f1] focus:ring-1 border-[#d1d5db] border-[1px] rounded-md">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                    <div>
+                                        <button class="text-[#9ca3af] hover:text-[#6b7280] p-2 pt-1" type="button">
+                                            <span class="hidden">remove</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                                            </svg>                                              
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm flex mt-4 text-[#22c55e]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                                </svg>  
+                                <span class="text-black ml-2">In stock</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="py-10 flex border-t-[1px] border-[#e5e7eb]">
+                        <div>
+                            <img class="w-48 h-48 object-cover object-center rounded-md" src="./images/shopping-cart-page-01-product-02.jpg" alt="images">
+                        </div>
+                        <div class="ml-6 flex flex-col justify-between w-full">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="flex flex-col col-span-1">
+                                    <div>
+                                        <h3 class="text-sm">
+                                            <a class="text-[#374151] font-medium" href="#">Basic Tee</a>
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center mt-1 text-sm">
+                                        <p class="text-[#6b7280]">Black</p>
+                                        <p class="text-[#6b7280] pl-4 border-[#e5e7eb] border-l-[1px] ml-4">Large</p>
+                                    </div>
+                                    <p class="text-sm font-medium mt-1">$32.00</p>
+                                </div>
+                                <div class="flex justify-between items-start">
+                                    <label for="quantity-1" class="hidden">Quantity, Basic Tee</label>
+                                    <select name="quantity-1" id="quantity-1" class="w-14 text-sm shadow px-2 text-[#374151] font-medium text-left py-[0.375rem] focus:border-[#6366f1] focus:ring-[#6366f1] focus:ring-1 border-[#d1d5db] border-[1px] rounded-md">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                    <div>
+                                        <button class="text-[#9ca3af] hover:text-[#6b7280] p-2 pt-1" type="button">
+                                            <span class="hidden">remove</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                                            </svg>                                              
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm flex mt-4 text-[#d1d5db]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
+                                </svg>                                    
+                                <span class="text-black ml-2">Ships in 3–4 weeks</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="py-10 flex border-t-[1px] border-[#e5e7eb]">
+                        <div>
+                            <img class="w-48 h-48 object-cover object-center rounded-md" src="./images/shopping-cart-page-01-product-03.jpg" alt="images">
+                        </div>
+                        <div class="ml-6 flex flex-col justify-between w-full">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="flex flex-col col-span-1">
+                                    <div>
+                                        <h3 class="text-sm">
+                                            <a class="text-[#374151] font-medium" href="#">Nomad Tumbler</a>
+                                        </h3>
+                                    </div>
+                                    <div class="flex items-center mt-1 text-sm">
+                                        <p class="text-[#6b7280]">White</p>
+                                    </div>
+                                    <p class="text-sm font-medium mt-1">$35.00</p>
+                                </div>
+                                <div class="flex justify-between items-start">
+                                    <label for="quantity-2" class="hidden">Quantity, Basic Tee</label>
+                                    <select name="quantity-2" id="quantity-2" class="w-14 text-sm shadow px-2 text-[#374151] font-medium text-left py-[0.375rem] focus:border-[#6366f1] focus:ring-[#6366f1] focus:ring-1 border-[#d1d5db] border-[1px] rounded-md">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                    <div>
+                                        <button class="text-[#9ca3af] hover:text-[#6b7280] p-2 pt-1" type="button">
+                                            <span class="hidden">remove</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                                            </svg>                                              
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-sm flex mt-4 text-[#22c55e]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                                </svg>  
+                                <span class="text-black ml-2">In stock</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section aria-labelledby="summary-heading" class="p-8 bg-[#f9fafb] rounded-lg w-1/3 h-96">
+                <h2 class="text-[#111827] text-lg font-medium ">Order summary</h2>
+                <dl class="mt-6">
+                    <div class="flex justify-between items-center">
+                        <dt class="text-[#4b5563] text-sm">Subtotal</dt>
+                        <dd class="text-[#111827] text-sm font-medium">$99.00</dd>
+                    </div>
+                    <div class="flex justify-between items-center border-[#e5e7eb] border-t-[1px] mt-4 pt-4">
+                        <dt class="text-[#4b5563] text-sm flex items-center">
+                            <span>Shipping estimate</span>
+                            <a class="ml-2 text-[#9ca3af] hover:text-[#6b7280]" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0ZM8.94 6.94a.75.75 0 1 1-1.061-1.061 3 3 0 1 1 2.871 5.026v.345a.75.75 0 0 1-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 1 0 8.94 6.94ZM10 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="hidden">question icon</span>
+                            </a>
+                        </dt>
+                        <dd class="text-[#111827] font-medium text-sm">$5.00</dd>
+                    </div>
+                    <div class="flex justify-between items-center border-[#e5e7eb] border-t-[1px] mt-4 pt-4">
+                        <dt class="text-[#4b5563] text-sm flex items-center">
+                            <span>Tax estimate</span>
+                            <a class="ml-2 text-[#9ca3af] hover:text-[#6b7280]" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0ZM8.94 6.94a.75.75 0 1 1-1.061-1.061 3 3 0 1 1 2.871 5.026v.345a.75.75 0 0 1-1.5 0v-.5c0-.72.57-1.172 1.081-1.287A1.5 1.5 0 1 0 8.94 6.94ZM10 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
+                                </svg>
+                                <span class="hidden">question icon</span>
+                            </a>
+                        </dt>
+                        <dd class="text-[#111827] font-medium text-sm">$8.32</dd>
+                    </div>
+                    <div class="flex justify-between items-center border-[#e5e7eb] border-t-[1px] mt-4 pt-4">
+                        <dt class="text-[#111827] text-base font-medium">Order total</dt>
+                        <dd class="text-[#111827] text-base font-medium">$112.32</dd>
+                    </div>
+                </dl>
+                <div class="mt-6">
+                    <button type="button" class="text-[#f9fafb] bg-[#6366f1] hover:bg-[#4338ca] shadow 
+                    font-medium text-base rounded-md w-full py-3 px-4 focus:ring-2 focus:ring-offset-2 focus:bg-[#4338ca] focus:ring-[#4338ca]">Checkout</button>
+                </div>
+            </section>
+        </form>
+        <section class="mt-24">
+            <h2 class="text-[#111826] text-lg font-medium">You may also like…</h2>
+            <div class="flex gap-8 mt-6">
+                <a class="hover:opacity-80" href="#">
+                    <div class="w-full overflow-hidden rounded-md ">
+                        <img class="object-cover object-center" src="./images/shopping-cart-page-01-related-product-01.jpg" alt="Billfold Wallet">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div class="flex-col">
+                            <p class="text-[#374151] text-base">Billfold Wallet</p>
+                            <p class="text-[#6b7280] text-sm mt-1">Natural</p>
+                        </div>
+                        <p>$118</p>
+                    </div>
+                </a>
+                <a class="hover:opacity-80" href="#">
+                    <div class="w-full overflow-hidden rounded-md">
+                        <img class="object-cover object-center" src="./images/shopping-cart-page-01-related-product-02.jpg" alt="Basic Tee">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div class="flex-col">
+                            <p class="text-[#374151] text-base">Machined Pen and Pencil Set</p>
+                            <p class="text-[#6b7280] text-sm mt-1">Black</p>
+                        </div>
+                        <p class="text-[#111826] text-sm font-medium">$70</p>
+                    </div>
+                </a>
+                <a class="hover:opacity-80" href="#">
+                    <div class="w-full overflow-hidden rounded-md">
+                        <img class="object-cover object-center" src="./images/shopping-cart-page-01-related-product-03.jpg" alt="Artwork Tee">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div class="flex-col">
+                            <p class="text-[#374151] text-base">BMini Sketchbook Set</p>
+                            <p class="text-[#6b7280] text-sm mt-1">Tan and Charcoal</p>
+                        </div>
+                        <p>$28</p>
+                    </div>
+                </a>
+                <a class="hover:opacity-80" href="#">
+                    <div class="w-full overflow-hidden rounded-md">
+                        <img class="object-cover object-center" src="./images/shopping-cart-page-01-related-product-04.jpg" alt="Basic Tee">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div class="flex-col">
+                            <p class="text-[#374151] text-base">Organize Set</p>
+                            <p class="text-[#6b7280] text-sm mt-1">Walnut</p>
+                        </div>
+                        <p>$149</p>
+                    </div>
+                </a>
+        </section>
+    </main>
+
+    <footer class="bg-[#111827] px-8">
+        <div class=" flex justify-between gap-8 py-20">
+            <!-- shop list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Shop</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Bags</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Tees</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Objects</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Home Goods</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Accessories</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Company list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Company</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Who we are</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Sustainability</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Press</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Careers</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Account list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Account</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Manage Account</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Returns & Exchanges</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Redeem a Gift Card</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Connect list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Connect</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Contact Us</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Facebook</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Instagram</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign up for our newsletter -->
+            <div>
+                <h3 class="text-white font-medium text-base">Sign up for our newsletter</h3>
+                <div>
+                    <p class="mt-6 text-[#d1d5db] text-base">The latest deals and savings, sent to your inbox weekly.</p>
+                </div>
+                <form class="mt-2 flex" action="searchbox">
+                    <label class="hidden" for="email-address">Email address</label>
+                    <input class="shadow py-2 px-4 rounded-md w-full border-transparent" type="text" id="email-address" required>
+                    <div class="ml-4 shrink-0">
+                        <button class="shadow font-medium text-base px-4 py-2 bg-[#4f46e5] border-transparent rounded-md w-full justify-center items-center flex text-white" type="submit" >Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- copyright section -->
+        <div class="border-[#1f2937] border-t-2 py-10">
+            <p class="text-[#9ca3af] text-sm">Copyright © 2021 Your Company, Inc.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

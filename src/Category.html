@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body>
+
+    <div id="overlay" class=" h-full w-full fixed top-0 right-0 hidden z-10"></div>
+    
+    <header>
+        <!-- the first navbar -->
+        <nav class="bg-[#111824] flex justify-between py-2 px-12">
+            <span class="flex items-center font-medium text-base gap-1 text-white cursor-pointer">CAD<svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>                  
+            </span>
+            <div class="text-white font-medium text-base">
+                <a class="pr-8" href="#">Sign in</a>
+                <a href="#">Create an account</a>
+            </div>
+        </nav>
+        <!-- second navbar -->
+        <nav class="flex justify-between items-center bg-neutral-600 py-4 px-12">
+            <a href="#">
+                <span class="hidden">page logo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="35" height="35" class="text-white">
+                    <path d="M5.223 2.25c-.497 0-.974.198-1.325.55l-1.3 1.298A3.75 3.75 0 0 0 7.5 9.75c.627.47 1.406.75 2.25.75.844 0 1.624-.28 2.25-.75.626.47 1.406.75 2.25.75.844 0 1.623-.28 2.25-.75a3.75 3.75 0 0 0 4.902-5.652l-1.3-1.299a1.875 1.875 0 0 0-1.325-.549H5.223Z" />
+                    <path fill-rule="evenodd" d="M3 20.25v-8.755c1.42.674 3.08.673 4.5 0A5.234 5.234 0 0 0 9.75 12c.804 0 1.568-.182 2.25-.506a5.234 5.234 0 0 0 2.25.506c.804 0 1.567-.182 2.25-.506 1.42.674 3.08.675 4.5.001v8.755h.75a.75.75 0 0 1 0 1.5H2.25a.75.75 0 0 1 0-1.5H3Zm3-6a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-3Zm8.25-.75a.75.75 0 0 0-.75.75v5.25c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-5.25a.75.75 0 0 0-.75-.75h-3Z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div class="text-white flex gap-8 font-semibold pl-12">
+                <button id="mega-menu-women" class="z-50" type="button">Women</button>
+                <button id="mega-menu-men" class="z-50" type="button">Men</button>
+                <button type="button">Company</button>
+                <button type="button">Stores</button>
+            </div>
+            <div class="flex text-white gap-8 font-semibold">
+                <a href="#">Search</a>
+                <a href="#">Help</a>
+                <a class="flex gap-2" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+                    0                      
+                </a>
+            </div>              
+        </nav>
+    </header>
+
+    <main class="px-10">
+
+        <div class="flex flex-col py-24 justify-center items-center">
+            <h1 class="text-[#111827] text-4xl font-bold tracking-tight">New Arrivals</h1>
+            <p class="text-[#6b7280] text-base mt-4">Thoughtfully designed objects for the workspace, home, and travel.</p>
+        </div>
+
+        <section class="pt-6 border-t-[1px] bprder-[#e5e7eb]">
+            <h2 class="hidden">Product filters</h2>
+            <div id="filter" class="flex justify-between items-center">
+                <div class="relative">
+                    <button onclick="sort()" class="text-[#374151] z-20 hover:text-[#6b7280] font-medium text-sm flex" type="button">
+                        <span class="pr-1">Sort</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </button> 
+                    <div id="sort-list" class="hidden justify-start absolute w-40 z-20 left-0 mt-2 border-gray-100 border-[1px] rounded-md shadow bg-white ">
+                        <ul>
+                            <li class="py-2 px-4 hover:bg-[#f3f4f6] cursor-pointer">
+                                <a class="text-[#111827] font-medium text-sm" href="#">Most Popular</a>
+                            </li>
+                            <li class="py-2 px-4 hover:bg-[#f3f4f6] cursor-pointer">
+                                <a class="text-[#111827] font-medium text-sm" href="#">Best Rating</a>
+                            </li>
+                            <li class="py-2 px-4 hover:bg-[#f3f4f6] cursor-pointer">
+                                <a class="text-[#111827] font-medium text-sm" href="#">Newest</a>
+                            </li>
+                            <li class="py-2 px-4 hover:bg-[#f3f4f6] cursor-pointer">
+                                <a class="text-[#111827] font-medium text-sm" href="#">Price: Low to High</a>
+                            </li>
+                            <li class="py-2 px-4 hover:bg-[#f3f4f6] cursor-pointer">
+                                <a class="text-[#111827] font-medium text-sm" href="#">Price: High ti Low</a>
+                            </li>
+                        </ul>
+                    </div>                                         
+                </div>
+                <div class="flex">
+                    <div class="relative">
+                        <button onclick="category()" class="flex text-[#374151] z-20 hover:text-[#6b7280] font-medium text-sm" type="button">
+                            <span>Category</span>
+                            <span class="font-semibold text-xs py-[0.125rem] px-1 bg-[#e5e7eb] rounded ml-1">1</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>                             
+                        </button>
+                        <div id="category-list" class="hidden justify-start absolute w-40 z-20 left-0 mt-2 border-gray-100 border-[1px] rounded-md shadow bg-white ">
+                            <form>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-0" type="checkbox" value="tees" name="category" >
+                                    <label for="filter-category-0" class="ml-2">Tees</label>
+                                </div>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-1" type="checkbox" value="Crewnecks" name="category" >
+                                    <label for="filter-category-1" class="ml-2">Crewnecks</label>
+                                </div>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-2" type="checkbox" value="Hats" name="category" >
+                                    <label for="filter-category-2" class="ml-2">Hats</label>
+                                </div>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-3" type="checkbox" value="Bundles" name="category" >
+                                    <label for="filter-category-3" class="ml-2">Bundles</label>
+                                </div>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-4" type="checkbox" value="Carry" name="category" >
+                                    <label for="filter-category-4" class="ml-2">Carry</label>
+                                </div>
+                                <div class="flex items-center py-2 px-4">
+                                    <input id="filter-category-5" type="checkbox" value="Objects" name="category" >
+                                    <label for="filter-category-5" class="ml-2">Objects</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="ml-8 relative">
+                        <div>
+                            <button onclick="brand()" class="flex text-[#374151] z-20 hover:text-[#6b7280] font-medium text-sm" type="button">
+                                <span class="mr-1">Brand</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>  
+                            </button>
+                            <div id="brand-list" class="hidden justify-start absolute w-48 z-20 right-0 mt-2 border-gray-100 border-[1px] rounded-md shadow bg-white ">
+                                <form>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-brand-0" type="checkbox" value="Clothing Company" name="Brand" >
+                                        <label for="filter-brand-0" class="ml-2">Clothing Company</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-brand-1" type="checkbox" value="Fashion Inc." name="Brand" >
+                                        <label for="filter-brand-1" class="ml-2">Fashion Inc.</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-brand-2" type="checkbox" value="Shoes 'n More" name="Brand" >
+                                        <label for="filter-brand-2" class="ml-2">Shoes 'n More</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-brand-3" type="checkbox" value="Supplies 'n Stuff" name="Brand" >
+                                        <label for="filter-brand-3" class="ml-2">Supplies 'n Stuff</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-8">
+                        <div>
+                            <button onclick="color()" class="flex text-[#374151] z-20 hover:text-[#6b7280] font-medium text-sm" type="button">
+                                <span>Color</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg> 
+                            </button>
+                            <div id="color-list" class="hidden justify-start absolute w-40 z-20 right-0 mt-2 border-gray-100 border-[1px] rounded-md shadow bg-white ">
+                                <form>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-0" type="checkbox" value="White" name="category" >
+                                        <label for="filter-color-0" class="ml-2">White</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-1" type="checkbox" value="Black" name="category" >
+                                        <label for="filter-color-1" class="ml-2">Black</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-2" type="checkbox" value="Grey" name="category" >
+                                        <label for="filter-color-2" class="ml-2">Grey</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-3" type="checkbox" value="Blue" name="category" >
+                                        <label for="filter-color-3" class="ml-2">Blue</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-4" type="checkbox" value="Olive" name="category" >
+                                        <label for="filter-color-4" class="ml-2">Olive</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-color-5" type="checkbox" value="Tan" name="category" >
+                                        <label for="filter-color-5" class="ml-2">Tan</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative ml-8">
+                        <div>
+                            <button onclick="size()" class="flex text-[#374151] z-20 hover:text-[#6b7280] font-medium text-sm" type="button">
+                                <span>Sizes</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg> 
+                            </button>
+                            <div id="size-list" class="hidden justify-start absolute w-40 z-20 right-0 mt-2 border-gray-100 border-[1px] rounded-md shadow bg-white ">
+                                <form>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-0" type="checkbox" value="XS" name="category" >
+                                        <label for="filter-size-0" class="ml-2">XS</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-1" type="checkbox" value="S" name="category" >
+                                        <label for="filter-size-1" class="ml-2">v</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-2" type="checkbox" value="M" name="category" >
+                                        <label for="filter-size-2" class="ml-2">M</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-3" type="checkbox" value="L" name="category" >
+                                        <label for="filter-size-3" class="ml-2">L</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-4" type="checkbox" value="XL" name="category" >
+                                        <label for="filter-size-4" class="ml-2">XL</label>
+                                    </div>
+                                    <div class="flex items-center py-2 px-4">
+                                        <input id="filter-size-5" type="checkbox" value="2XL" name="category" >
+                                        <label for="filter-size-5" class="ml-2">2XL</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8">
+            <div class="grid grid-cols-6 gap-8 ">
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-01.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Focus Paper Refill</h3>
+                        <p>$13</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">3 sizes available</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-02.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Focus Card Holder</h3>
+                        <p>$64</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Walnut</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-03.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Focus Carry Pouch</h3>
+                        <p>$32</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Heather Gray</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-04.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Focus Multi-Pack</h3>
+                        <p>$39</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">3 refill packs</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-05.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Machined Mechanical Pencil</h3>
+                        <p>$35</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Black and brass</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-06.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Brass Scissors</h3>
+                        <p>$50</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Includes brass stand</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="rounded-lg overflow-hidden mt-16 relative">
+            <div class="w-full h-96">
+                <img class="object-down object-cover h-full w-full" src="./images/category-page-01-featured-collection.jpg" alt="images">
+            </div>
+            <span aria-hidden="true" class="absolute top-0 bottom-0 left-0 right-0 rounded-lg w-96 block bg-black opacity-75 backdrop-blur-3xl"></span>
+            <div class="flex absolute top-0 bottom-0 flex-col rounded-lg w-96 justify-between p-6">
+                <div class="w-96">
+                    <h2 class="text-white text-xl font-bold">Workspace Collection</h2>
+                    <p class="text-[#d1d5db] mt-1 text-sm w-80">Upgrade your desk with objects that keep you organized and clear-minded.</p>
+                </div>
+                <a class="flex justify-center items-center w-full text-white hover:bg-white hover:bg-opacity-10 text-base font-medium py-3 px-4 border-white border-[1px] border-opacity-25 rounded-md" href="#">View the collection</a>
+            </div>
+            
+        </section>
+
+        <section class="mt-16"></section>
+            <div class="grid grid-cols-6 gap-8 ">
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-07.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Electric Kettle</h3>
+                        <p>$149</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Black</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-08.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Leather Workspace Pad</h3>
+                        <p>$165</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Black</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-09.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Leather Long Wallet</h3>
+                        <p>$118</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Natural</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-10.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Machined Sphere Puzzle</h3>
+                        <p>$95</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Includes brass stand</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-11.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Minimalist Wristwatch</h3>
+                        <p>$149</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">3 wrist band options</p>
+                </a>
+                <a class="col-span-2 hover:opacity-80" href="#">
+                    <div class="relative rounded-lg w-full overflow-hidden">
+                        <img class="object-center object-cover" src="./images/category-page-01-image-card-12.jpg" alt="images">
+                    </div>
+                    <div class="flex justify-between items-center mt-4 text-[#111827] text-base font-medium">
+                        <h3>Motto Leather Coaster Set</h3>
+                        <p>$18</p>
+                    </div>
+                    <p class="text-[#6b7280] italic mt-1 text-sm">Natural</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#111827] px-8 mt-24">
+        <div class=" flex justify-between gap-8 py-20">
+            <!-- shop list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Shop</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Bags</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Tees</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Objects</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Home Goods</a>
+                    </li>
+                    <li  class="mt-6">
+                        <a class="hover:text-white" href="#">Accessories</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Company list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Company</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Who we are</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Sustainability</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Press</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Careers</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Terms & Conditions</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Account list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Account</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Manage Account</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Returns & Exchanges</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Redeem a Gift Card</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Connect list -->
+            <div>
+                <h3 class="text-white font-medium text-base">Connect</h3>
+                <ul class="mt-6 text-[#d1d5db] text-base">
+                    <li>
+                        <a class="hover:text-white" href="#">Contact Us</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Facebook</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Instagram</a>
+                    </li>
+                    <li class="mt-6">
+                        <a class="hover:text-white" href="#">Pinterest</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign up for our newsletter -->
+            <div>
+                <h3 class="text-white font-medium text-base">Sign up for our newsletter</h3>
+                <div>
+                    <p class="mt-6 text-[#d1d5db] text-base">The latest deals and savings, sent to your inbox weekly.</p>
+                </div>
+                <form class="mt-2 flex" action="searchbox">
+                    <label class="hidden" for="email-address">Email address</label>
+                    <input class="shadow py-2 px-4 rounded-md w-full border-transparent" type="text" id="email-address" required>
+                    <div class="ml-4 shrink-0">
+                        <button class="shadow font-medium text-base px-4 py-2 bg-[#4f46e5] border-transparent rounded-md w-full justify-center items-center flex text-white" type="submit" >Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- copyright section -->
+        <div class="border-[#1f2937] border-t-2 py-10">
+            <p class="text-[#9ca3af] text-sm">Copyright © 2021 Your Company, Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const sortList = document.getElementById('sort-list');
+        const categoryList = document.getElementById('category-list');
+        const brandList = document.getElementById('brand-list');
+        const colorList = document.getElementById('color-list');
+        const sizeList = document.getElementById('size-list');
+        const filter = document.getElementById('filter');
+        const overlay = document.getElementById('overlay');
+
+        function sort() {
+            sortList.classList.remove('hidden');
+            sortList.classList.add('flex-col');
+            overlay.classList.remove('hidden');
+        }
+
+        function category() {
+            categoryList.classList.remove('hidden');
+            categoryList.classList.add('flex-col');
+            overlay.classList.remove('hidden');
+        }
+
+        function brand() {
+            brandList.classList.remove('hidden');
+            brandList.classList.add('flex-col');
+            overlay.classList.remove('hidden');
+        }
+
+        function color() {
+            colorList.classList.remove('hidden');
+            colorList.classList.add('flex-col');
+            overlay.classList.remove('hidden');
+        }
+
+        function size() {
+            sizeList.classList.remove('hidden');
+            sizeList.classList.add('flex-col');
+            overlay.classList.remove('hidden');
+        }
+
+        function closefilter() {
+            sizeList.classList.remove('flex-col');
+            sizeList.classList.add('hidden');
+            
+            colorList.classList.remove('flex-col');
+            colorList.classList.add('hidden');
+
+            brandList.classList.remove('flex-col');
+            brandList.classList.add('hidden');
+
+            categoryList.classList.remove('flex-col');
+            categoryList.classList.add('hidden');
+
+            sortList.classList.remove('flex-col');
+            sortList.classList.add('hidden');
+
+            overlay.classList.add('hidden');
+        }
+
+        overlay.addEventListener('click' , () => closefilter())
+
+    </script>
+
+</body>
+</html>
