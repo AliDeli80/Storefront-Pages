@@ -74,3 +74,7 @@ This project utilizes the following Tailwind UI components:
 - Use a robust state management solution like Zustand or React Query to manage product data and cart functionality.
 
 By following these steps and leveraging the power of Tailwind CSS and Tailwind UI, you can create stunning and functional storefront pages to showcase your products and drive sales.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
